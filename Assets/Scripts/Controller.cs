@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+  private const float V = 4.25f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,11 +15,11 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.z < 4.25f)
+        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.z < V)
         {
             transform.position += transform.forward * 0.15f;
         }
-        else if (Input.GetKey(KeyCode.RightArrow) && transform.position.z > -4.25f)
+        else if (Input.GetKey(KeyCode.RightArrow) && transform.position.z > -V)
         {
             transform.position -= transform.forward * 0.15f;
         }
