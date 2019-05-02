@@ -13,11 +13,11 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.z < 4.25f)
         {
             transform.position += transform.forward * 0.15f;
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) && transform.position.z > -4.25f)
         {
             transform.position -= transform.forward * 0.15f;
         }
