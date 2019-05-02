@@ -24,4 +24,9 @@ public class Controller : MonoBehaviour
             transform.position -= transform.forward * 0.15f;
         }
     }
+
+    void OnColligionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+    }
 }
